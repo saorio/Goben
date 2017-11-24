@@ -14,10 +14,10 @@ var (
 )
 
 func main() {
-	ConsumerKey := "iaQcKNAy0ctYb4gIIfji7xSNR"
-	ConsumerSecret := "FEsuiDoCs6ftWAqMyLdFzSOGW1oixK5XMaYaoff7GNfT0dsGF3"
-	AccessToken := "53841728-EgOzg31Ew7l0wUBlUtJFckW8usCskJxu98VPq5ACT"
-	AccessTokenSecret := "mbDS9AfNApOHxQ2l20L3PAzxpqujTfdNA3zXlVGme7XTx"
+	ConsumerKey := "
+	ConsumerSecret := ""
+	AccessToken := ""
+	AccessTokenSecret := ""
 
 	anaconda.SetConsumerKey(ConsumerKey)
 	anaconda.SetConsumerSecret(ConsumerSecret)
