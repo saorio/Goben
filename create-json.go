@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 )
@@ -29,5 +30,7 @@ func main() {
 		fmt.Println("JSON Mershal error:", err)
 		return
 	}
-	fmt.Println(string(jsonBytes))
+	formated := new(bytes.Buffer)
+	json.Indent(formated, jsonBytes, "", "	")
+	fmt.Println(formated.String())
 }
