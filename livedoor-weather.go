@@ -1,46 +1,26 @@
 package main
 
 import (
-	"encoding/xml"
 	"fmt"
-	"io/ioutil"
-	"log"
-	"net/http"
 )
 
-var RSS_FEED_TOKYO string = "http://weather.livedoor.com/forecast/rss/area/130010.xml"
-
-type WeatherInfo struct {
-	Title       string   `xml:"channel>title"`
-	Description []string `xml:"channel>item>description"`
+type Prefecture struct {
+	Number string
+	Name string
 }
 
+func (p *Prefecture) CallPrefecture() string {
+	return p.Number + p.Name
+}
+
+type District interface {
+	CallPrefecture() string
+}
+
+func describePrefecture(district District) {
+	fmt.Println(district.District)
+}
 func main() {
-	wi, err := DescribeWether(RSS_FEED_TOKYO)
-
-	if err != nil {
-		log.Fatal("Log: %v", err)
-		return
-	}
-	fmt.Println(wi.Title)
-	for n, v := range wi.Description {
-		if n > 0 {
-			fmt.Printf("%s \n", v)
-		}
-	}
-}
-
-func DescribeWether(feed string) (p *WeatherInfo, err error) {
-	res, err := http.Get(feed)
-	if err != nil {
-		return nil, err
-	}
-	b, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return nil, err
-	}
-	wi := new(WeatherInfo)
-	err = xml.Unmarshal(b, &wi)
-
-	return wi, err
+	Prefecture := &Prefecture{"110-0014", "台東区北上野"}
+	ptintName(Prefecture)
 }
