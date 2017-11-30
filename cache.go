@@ -14,5 +14,5 @@ func main() {
 	if err != nil {
 		fmt.Print(err)
 	}
-	fmt.Println(it)
+	fmt.Println(it.Key, it.Value)
 }
