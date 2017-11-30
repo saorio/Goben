@@ -1,20 +1,21 @@
 package main
 
 import (
-	"github.com/ChimeraCoder/anaconda"
 	"fmt"
-//	"time"
+
+	"github.com/ChimeraCoder/anaconda"
+	//	"time"
 )
 
 var (
-	ConsumerKey string
-	ConsumerSecret string
-	AccessToken string
+	ConsumerKey       string
+	ConsumerSecret    string
+	AccessToken       string
 	AccessTokenSecret string
 )
 
 func main() {
-	ConsumerKey := "
+	ConsumerKey := ""
 	ConsumerSecret := ""
 	AccessToken := ""
 	AccessTokenSecret := ""
