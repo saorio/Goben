@@ -5,13 +5,7 @@ import (
 	"strconv"
 )
 
-// interface
-type Car interface {
-	run(int) string
-	stop()
-}
-
-// structure
+// MyCar is structure
 type MyCar struct {
 	name  string
 	speed int
