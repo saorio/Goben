@@ -4,9 +4,10 @@ import (
 	"fmt"
 )
 
+// Prefecture is struct
 type Prefecture struct {
 	Number string
-	Name string
+	Name   string
 }
 
 func (p *Prefecture) CallPrefecture() string {

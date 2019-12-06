@@ -7,12 +7,17 @@ import (
 	//	"time"
 )
 
-var (
-	ConsumerKey       string
-	ConsumerSecret    string
-	AccessToken       string
-	AccessTokenSecret string
-)
+// ConsumerKey key
+var ConsumerKey string
+
+// ConsumerSecret secret
+var ConsumerSecret string
+
+// AccessToken token
+var AccessToken string
+
+// AccessTokenSecret secret
+var AccessTokenSecret string
 
 func main() {
 	ConsumerKey := ""
@@ -24,8 +29,8 @@ func main() {
 	anaconda.SetConsumerSecret(ConsumerSecret)
 	api := anaconda.NewTwitterApi(AccessToken, AccessTokenSecret)
 
-	search_Result, _ := api.GetSearch("golang", nil)
-	for _, tweet := range search_Result.Statuses {
+	searchResult, _ := api.GetSearch("golang", nil)
+	for _, tweet := range searchResult.Statuses {
 		fmt.Println(tweet.Text)
 		// api.SetDelay(10*time.Second)
 	}

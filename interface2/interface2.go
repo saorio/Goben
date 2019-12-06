@@ -2,16 +2,18 @@ package main
 
 import "fmt"
 
+// Prefecture is struct
 type Prefecture struct {
 	Number string
 	Name   string
 }
 
+// Call return string
 func (p *Prefecture) Call() string {
 	return p.Number + p.Name
 }
 
-// describeというものを以下で定義、string型で返すCallメソッドを1つだけ持つ
+// CallPrefecture describeというものを以下で定義、string型で返すCallメソッドを1つだけ持つ
 type CallPrefecture interface {
 	Call() string
 }

@@ -9,10 +9,9 @@ func main() {
 	for i = 1; i <= 100; i++ {
 
 		if i%2 == 0 {
-			fmt.Println(i, "数値-偶数")
+			fmt.Println(i, "this is even.")
 		} else {
-			fmt.Println(i, "数値-奇数")
+			fmt.Println(i, "this is odd.")
 		}
 	}
 }
-
